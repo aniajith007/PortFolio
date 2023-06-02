@@ -1,5 +1,7 @@
+import React  from 'react';
 const navigation = [
   { name: "About", href: "#about", current: true },
+  { name: "Experience", href: "#experience", current: false },
   { name: "Works", href: "#works", current: false },
   { name: "Timeline", href: "#", current: false },
   { name: "Contact", href: "#", current: false },
@@ -7,6 +9,7 @@ const navigation = [
 
 export default function Example() {
   return (
+    <>
     <div className="navbar bg-white dark:bg-[#0a192f]">
       <div className="navbar-start">
         <div className="dropdown">
@@ -56,5 +59,6 @@ export default function Example() {
         <a className="btn">Get started</a>
       </div> */}
     </div>
+    </>
   );
 }

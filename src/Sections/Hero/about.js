@@ -3,7 +3,7 @@ import '../../Css/style.css';
 
 function About() {
   return (
-    <div class="pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pb-4 bg-[#0a192f] min-h-screen">
+    <div class="pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 bg-[#0a192f] min-h-screen">
       <div class="items-center lg:flex lg:ml-12">
         <div class="w-full lg:w-1/2">
           <div class="lg:max-w-lg">
@@ -16,7 +16,7 @@ function About() {
               </span>
             </header>
             <h1 class="text-3xl font-semibold mt-8 text-gray-800 dark:text-white lg:text-4xl lg:mt-0">
-              I'm a <span class="text-blue-500 ">web developer</span>
+              I'm a <span class="text-green-500 ">web developer</span>
             </h1>
 
             <p class="mt-3 text-gray-600 dark:text-gray-400 text-xl">

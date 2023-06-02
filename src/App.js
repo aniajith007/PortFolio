@@ -1,3 +1,4 @@
+import React  from 'react';
 import Navbar from "./Nav/Navbar";
 import Footer from "./Foot/Footer";
 import Jumbo from "./MainHero/Jumbo";
@@ -112,8 +113,7 @@ function App() {
         </ul>
         <div class="ml-5 mt-2 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       </aside> */}
-      <SideElements/>
-      
+      <SideElements/>      
       <Navbar />
       <Jumbo />
       <Sections />

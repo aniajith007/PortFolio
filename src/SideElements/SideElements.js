@@ -5,11 +5,11 @@ function SideElements() {
     <>
       <aside
         id="default-sidebar"
-        class="hidden lg:block fixed lg:top-96 lg:left-4 lg:z-40 lg:w-64 lg:h-screen transition-transform -translate-x-full sm:translate-x-0 md:translate-x-0"
+        class="hidden lg:block fixed lg:top-96 lg:left-4 lg:z-40 lg:w-10 lg:h-screen transition-transform -translate-x-full sm:translate-x-0 md:translate-x-0"
         aria-label="Sidebar"
       >
         <ul>
-          <li className="m-2 mb-4 transition-colors hover:text-green-400">
+          <li className="m-2 mb-4  hover:text-green-400 transition ease-in-out hover:-translate-y-1 hover:scale-100  duration-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -22,7 +22,7 @@ function SideElements() {
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
           </li>
-          <li className="m-2 mb-4 transition-colors hover:text-green-400">
+          <li className="m-2 mb-4  hover:text-green-400  transition ease-in-out hover:-translate-y-1 hover:scale-100  duration-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -37,7 +37,7 @@ function SideElements() {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
           </li>
-          <li className="m-2 mb-4 transition-colors hover:text-green-400">
+          <li className="m-2 mb-4  hover:text-green-400  transition ease-in-out hover:-translate-y-1 hover:scale-100  duration-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -98,7 +98,7 @@ function SideElements() {
         class=" hidden lg:block fixed lg:top-96 lg:right-0 lg:z-40  lg:h-screen transition-transform -translate-x-full sm:translate-x-0 md:translate-x-0"
         aria-label="Sidebar"
       >
-        <h6 className="rotate-90 mt-10 absolute hover:text-green-500 font-medium">
+        <h6 className="rotate-90 mt-10 cursor-pointer absolute hover:text-green-500 font-medium transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-150 duration-100">
           SwaminathanGiridharan@gmail.com
         </h6>
         <div className="mt-52 ml-32 mr-9 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>

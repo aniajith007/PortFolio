@@ -2,9 +2,9 @@ import React from "react";
 
 function Jumbo() {
   return (
-    <section class="bg-white dark:bg-[#0a192f] pt-16 pl-8 lg:pl-28 pb-80 lg:pb-32">
+    <section class="bg-white dark:bg-[#0a192f] pt-16 pl-8 lg:pl-28 pb-80 lg:pb-32 font-poppins">
       <div class="max-w-screen-xl mr-2 lg:mt-2 mt-20 p-2 lg:py-05 md:py-16">
-        <h1 className="text-2xl font-semibold text-green-400 font-mono mb-4">
+        <h1 className="text-xl font-normal text-green-400 mb-4">
           Hi, My name is
         </h1>
         <h1 class="mb-4 text-5xl font-bold tracking-tight leading-none text-gray-900  lg:text-7xl dark:text-white">

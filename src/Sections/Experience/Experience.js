@@ -8,7 +8,7 @@ const VerticalTabs = ({ tabs }) => {
   };
 
   return (
-    <div className="pl-8 pr-8 lg:pl-64 lg:pt-10 lg:pr-24 lg:pb-4 bg-[#0a192f] min-h-screen">
+    <div className="pl-8 pr-8 lg:pl-64 lg:pt-10 lg:pr-24 lg:pb-4 bg-[#0a192f] min-h-screen font-poppins">
       <header className="lg:mb-6">
         <span className="font-semibold text-xl text-green-400">02.</span>
         <span className="font-semibold text-xl link-underline link-underline-black">
@@ -23,7 +23,7 @@ const VerticalTabs = ({ tabs }) => {
             {tabs.map((tab, index) => (
               <li
                 key={index}
-                className={`cursor-pointer font-semibold hover:bg-[#112240] hover:text-green-300 bg-opacity-5  transform duration-200 p-2 ${
+                className={`cursor-pointer font-medium hover:bg-[#112240] hover:text-green-300 bg-opacity-5  transform duration-200 p-2 ${
                   activeTab === index
                     ? "border-l-green-400 border-l-2  bg-[#112240] text-green-400 rounded-sm pl-2 delay-300"
                     : "border-l-blue-800 border-l-2"

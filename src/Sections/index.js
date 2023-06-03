@@ -2,6 +2,7 @@ import React from "react";
 import About from "./Hero/about";
 import VerticalTabs from "./Experience/Experience";
 import Works from "./Works/Works";
+import Contact from "./Contact/Contact";
 
 function Sections() {
   const tabs = [
@@ -47,6 +48,9 @@ function Sections() {
       {/* <section id="works">
         <Works/>
       </section> */}
+      <section id = "contact">
+        <Contact/>
+      </section>
     </>
   );
 }

@@ -7,7 +7,7 @@ import SideElements from "./SideElements/SideElements";
 
 function App() {
   return (
-    <div>
+    <div className='scroll-smooth'>
       {/* <aside
         id="default-sidebar"
         class="lg:display fixed lg:top-64 lg:left-4 lg:z-40 lg:w-64 lg:h-screen transition-transform -translate-x-full sm:translate-x-0 md:translate-x-0"

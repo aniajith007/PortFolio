@@ -9,7 +9,7 @@ function About() {
           <div class="lg:max-w-lg">
             <header className="lg:mb-6">
               <span className="font-semibold text-xl text-green-400">01.</span>
-              <span className="font-semibold text-xl link-underline link-underline-black">
+              <span className="font-normal font-poppins text-xl link-underline link-underline-black">
                 {" "}
                 About Me
                 <span className="divider flex" />{" "}

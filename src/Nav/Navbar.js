@@ -1,16 +1,17 @@
 import React  from 'react';
+import Hoverbutton from '../Components/Hoverbutton';
 const navigation = [
   { name: "About", href: "#about", current: true },
   { name: "Experience", href: "#experience", current: false },
   { name: "Works", href: "#works", current: false },
   { name: "Timeline", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "Contact", href: "#contact", current: false },
 ];
 
 export default function Example() {
   return (
     <>
-    <div className="navbar bg-white dark:bg-[#0a192f]">
+    <div className="navbar bg-white dark:bg-[#0a192f] scroll-smooth">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden text-green-400">
@@ -49,15 +50,9 @@ export default function Example() {
             <li className="hover:text-green-400">
               <a href={item.href}><span className="text-green-400 font-mono">0{index+1+'. '}</span>{item.name}</a>
             </li>
-          ))}
-          <li>
-
-          </li>
-        </ul>
-      </div>
-      {/* <div className="navbar-end">
-        <a className="btn">Get started</a>
-      </div> */}
+          ))}                                
+        </ul>        
+      </div>      
     </div>
     </>
   );

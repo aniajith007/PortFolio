@@ -25,9 +25,10 @@ function Contact() {
                 My inbox is always open. Whether you have a question or just
                 want to say hi, I’ll try my best to get back to you!
               </p>
-              {/* <div className="absolute left-36 lg:ml-44 lg:left-auto md:ml-72"> */}              
+               
             </div>
-            <div className="lg:ml-44 md:ml-56">
+            {/* <div className="lg:ml-44 md:ml-56"> */}
+            <div className="absolute left-36 lg:ml-44 lg:left-auto md:ml-72">             
                 <Hoverbutton label={"Hello"} href={"mailto:swaminathangiridharan@gmail.com"} />
               </div>
           </div>

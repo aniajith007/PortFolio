@@ -1,5 +1,6 @@
 import React from "react";
 import '../../Css/style.css';
+import Card from "../../Card";
 
 function About() {
   return (
@@ -129,11 +130,12 @@ function About() {
         </div>
 
         <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-          <img
+          {/* <img
             class="w-full h-full lg:max-w-3xl"
             src="https://merakiui.com/images/components/Catalogue-pana.svg"
             alt="Catalogue-pana.svg"
-          />
+          /> */}
+          <Card/>
         </div>
       </div>
     </div>

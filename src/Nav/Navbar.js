@@ -1,5 +1,7 @@
 import React  from 'react';
 import Hoverbutton from '../Components/Hoverbutton';
+import { Reveal } from '../Components/Reveal';
+import { RevealTop } from '../Components/RevealTop';
 const navigation = [
   { name: "About", href: "#about", current: true },
   { name: "Experience", href: "#experience", current: false },
@@ -9,6 +11,7 @@ const navigation = [
 ];
 
 export default function Example() {
+  var delayInc = 0.25;
   return (
     <>
     <div className="navbar bg-white dark:bg-[#0a192f] scroll-smooth">
@@ -47,9 +50,11 @@ export default function Example() {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {navigation.map((item,index) => (
+            <RevealTop duration={0.5} delay={delayInc+=0.10}>
             <li className="hover:text-green-400">
               <a href={item.href}><span className="text-green-400 font-mono">0{index+1+'. '}</span>{item.name}</a>
             </li>
+            </RevealTop>
           ))}                                
         </ul>        
       </div>      

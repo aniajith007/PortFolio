@@ -1,7 +1,7 @@
 import React  from 'react';
 import Hoverbutton from '../Components/Hoverbutton';
-import { Reveal } from '../Components/Reveal';
-import { RevealTop } from '../Components/RevealTop';
+import { Reveal, RevealTop } from '../Components/Reveal';
+
 const navigation = [
   { name: "About", href: "#about", current: true },
   { name: "Experience", href: "#experience", current: false },
@@ -38,9 +38,11 @@ export default function Example() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navigation.map((item,index) => (
+              <RevealTop duration={0.5} delay={delayInc+=0.10}>
               <li className="hover:text-green-400" key={index}>
                 <a href={item.href}><span className="text-green-400 font-mono">0{index+1+'. '}</span>{item.name}</a>
               </li>
+              </RevealTop>
             )) //Button and Hidden Menu
           }
           </ul>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { RevealLeft } from "../Components/RevealLeft";
+import { RevealLeft,RevealRight,Reveal,RevealTop } from "../Components/Reveal";
 
 function SideElements() {
   const links = [
@@ -110,21 +110,25 @@ function SideElements() {
             </>
           ))}
         </ul>
-        <div class="ml-5 mt-2 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+        <Reveal duration={0.5} delay={0.75}>
+          <div class="ml-5 mt-2 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+        </Reveal>
       </aside>
       <aside
         id="default-sidebar"
         class=" hidden lg:block fixed lg:top-96 lg:right-0 lg:z-40  lg:h-screen transition-transform -translate-x-full sm:translate-x-0 md:translate-x-0"
         aria-label="Sidebar"
       >
-        <RevealLeft duration={0.5} delay={0.75}>
+        <RevealRight duration={0.5} delay={0.75}>
           <a href="mailto:swaminathangiridharan@gmail.com">
             <h6 className="rotate-90 mt-10 cursor-pointer absolute hover:text-green-500 font-medium transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-150 duration-100">
               SwaminathanGiridharan@gmail.com
             </h6>
           </a>
-        </RevealLeft>
-        <div className="mt-52 ml-32 mr-9 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+        </RevealRight>
+        <Reveal duration={0.5} delay={0.75}>
+          <div className="mt-52 ml-32 mr-9 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+        </Reveal>
       </aside>
     </>
   );

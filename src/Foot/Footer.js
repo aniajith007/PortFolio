@@ -1,4 +1,5 @@
 import React from "react";
+import { Reveal } from "../Components/Reveal";
 
 function Footer() {
   return (
@@ -41,14 +42,16 @@ function Footer() {
         </div>
 
         {/* <hr class="my-10 border-gray-200 dark:border-gray-700" /> */}
-
+        <Reveal>
         <div class="flex flex-col items-center sm:flex-row sm:justify-between">
           {/* <p class="text-sm text-gray-500">
             © Copyright 2021. All Rights Reserved.
           </p> */}
-          <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">
-            Designed & Built by Swaminathan Giridharan
-          </p>
+          
+            <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400 font-poppins">
+              Designed & Built by Swaminathan Giridharan
+            </p>
+          
 
           {/* <div class="flex mt-3 -mx-2 sm:mt-0">
             <a
@@ -79,6 +82,7 @@ function Footer() {
             </a>
           </div> */}
         </div>
+        </Reveal>
       </div>
     </footer>
   );

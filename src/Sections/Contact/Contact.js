@@ -10,7 +10,7 @@ function Contact() {
           <div class="w-full lg:w-1/2">
             <div class="lg:max-w-lg">
               <Reveal>
-              <header className="lg:mb-6 text-center">
+              <header className="lg:mb-6 mb-6 text-center">
                 <span className="font-semibold text-lg text-green-400">
                   04.
                 </span>
@@ -34,7 +34,7 @@ function Contact() {
             </div>
             {/* <div className="lg:ml-44 md:ml-56"> */}
             <Reveal>
-            <div className="absolute left-36 lg:ml-48 lg:left-auto md:ml-72">             
+            <div className="absolute ml-24 lg:ml-48 lg:left-auto md:ml-72">             
                 <Hoverbutton label={"Hello!!"} href={"mailto:swaminathangiridharan@gmail.com"} />
               </div></Reveal>
           </div>

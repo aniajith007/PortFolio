@@ -5,7 +5,7 @@ import { Reveal } from "../../Components/Reveal";
 function Contact() {
   return (
     <>
-      <div class="pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 bg-[#0a192f] min-h-screen">
+      <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen">
         <div class="items-center lg:flex lg:ml-12 justify-center">
           <div class="w-full lg:w-1/2">
             <div class="lg:max-w-lg">

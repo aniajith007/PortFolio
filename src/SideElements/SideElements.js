@@ -111,7 +111,7 @@ function SideElements() {
           ))}
         </ul>
         <Reveal duration={0.5} delay={0.75}>
-          <div class="ml-5 mt-2 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+          <div class="ml-5 mt-2 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-300 opacity-100 dark:opacity-50"></div>
         </Reveal>
       </aside>
       <aside
@@ -127,7 +127,7 @@ function SideElements() {
           </a>
         </RevealRight>
         <Reveal duration={0.5} delay={0.75}>
-          <div className="mt-52 ml-32 mr-9 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+          <div className="mt-52 ml-32 mr-9 inline-block h-[250px] min-h-[1em] w-0.5 self-stretch bg-neutral-300 opacity-100 dark:opacity-50"></div>
         </Reveal>
       </aside>
     </>

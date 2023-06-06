@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='scroll-smooth'>
       <BrowserRouter><Routes>
-        <Route path={'/'} element={<Navbar/>}>
+        <Route path={'/PortFolio'} element={<Navbar/>}>
           <Route index element={<MainPage/>}/>
         </Route>
       </Routes>

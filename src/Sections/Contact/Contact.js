@@ -2,7 +2,7 @@ import React from "react";
 import Hoverbutton from "../../Components/Hoverbutton";
 import { Reveal } from "../../Components/Reveal";
 
-function Contact() {
+function Contact({contact}) {
   return (
     <>
       <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen">
@@ -22,20 +22,19 @@ function Contact() {
               </header></Reveal>
               <Reveal>
               <div className="text-5xl text-center font-bold mb-6 font-poppins">
-                Get in Touch
+                {contact.heading}
               </div>
               </Reveal>
               <Reveal>
               <p className="text-xl text-center mb-6">
-                My inbox is always open. Whether you have a question or just
-                want to say hi, I’ll try my best to get back to you!
+                {contact.p}
               </p>
               </Reveal>
             </div>
             {/* <div className="lg:ml-44 md:ml-56"> */}
             <Reveal>
             <div className="absolute ml-24 lg:ml-48 lg:left-auto md:ml-72">             
-                <Hoverbutton label={"Hello!!"} href={"mailto:swaminathangiridharan@gmail.com"} />
+                <Hoverbutton label={contact.buttonText} href={contact.buttonLink} />
               </div></Reveal>
           </div>
         </div>

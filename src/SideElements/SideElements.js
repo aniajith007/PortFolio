@@ -1,21 +1,8 @@
 import React, { useEffect } from "react";
 import { RevealLeft,RevealRight,Reveal,RevealTop } from "../Components/Reveal";
 
-function SideElements() {
-  const links = [
-    {
-      name: "github",
-      href: "https://www.google.com",
-    },
-    {
-      name: "instagram",
-      href: "https://www.instagram.com/aniajith_007/",
-    },
-    {
-      name: "linkedin",
-      href: "https://https://www.linkedin.com/in/swaminathan-giridharan/",
-    },
-  ];
+function SideElements({SideElementsData}) {
+ 
   useEffect(() => {
     console.log("sideElements exec..");
   }, []);
@@ -27,7 +14,7 @@ function SideElements() {
         aria-label="Sidebar"
       >
         <ul>
-          {links.map((link) => (
+          {SideElementsData.links.map((link) => (
             <>
               {link.name === "github" ? (
                 <RevealLeft duration={0.5} delay={0.25}>
@@ -120,9 +107,9 @@ function SideElements() {
         aria-label="Sidebar"
       >
         <RevealRight duration={0.5} delay={0.75}>
-          <a href="mailto:swaminathangiridharan@gmail.com">
+          <a href={SideElementsData.rightEmail.email}>
             <h6 className="rotate-90 mt-10 cursor-pointer absolute hover:text-green-500 font-medium transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-150 duration-100">
-              SwaminathanGiridharan@gmail.com
+              {SideElementsData.rightEmail.view}
             </h6>
           </a>
         </RevealRight>

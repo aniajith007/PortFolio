@@ -1,7 +1,7 @@
 import React from "react";
 import { Reveal } from "../Components/Reveal";
 
-function Footer() {
+function Footer({footerData}) {
   return (
     <footer class="bg-white dark:bg-[#0a192f]">
       <div class="container px-6 py-8 mx-auto">
@@ -49,7 +49,7 @@ function Footer() {
           </p> */}
           
             <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400 font-poppins">
-              Designed & Built by Swaminathan Giridharan
+              {footerData.p}
             </p>
           
 

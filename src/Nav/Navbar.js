@@ -47,7 +47,7 @@ export default function Example() {
                   <RevealTop duration={0.5} delay={(delayInc += 0.1)}>
                     <li className="hover:text-green-400" key={index}>
                       <a href={item.href}>
-                        <span className="text-green-400 font-mono">
+                        <span className="text-green-400 text-sm font-mono">
                           0{index + 1 + ". "}
                         </span>
                         {item.name}
@@ -64,7 +64,7 @@ export default function Example() {
           <ul className="menu menu-horizontal px-1">
             {navigation.map((item, index) => (
               <RevealTop duration={0.5} delay={(delayInc += 0.1)}>
-                <li className="hover:text-green-400">
+                <li className="hover:text-green-400 text-sm">
                   <a href={item.href}>
                     <span className="text-green-400 font-mono">
                       0{index + 1 + ". "}

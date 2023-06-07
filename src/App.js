@@ -1,11 +1,8 @@
 import React  from 'react';
 import Navbar from "./Nav/Navbar";
-import Footer from "./Foot/Footer";
-import Jumbo from "./MainHero/Jumbo";
-import Sections from "./Sections";
-import SideElements from "./SideElements/SideElements";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './MainPage/MainPage';
+import IntroPage from './Pages/IntroPage';
 
 function App() {
   return (
@@ -13,6 +10,7 @@ function App() {
       <BrowserRouter><Routes>
         <Route path={'/PortFolio'} element={<Navbar/>}>
           <Route index element={<MainPage/>}/>
+          <Route path='intro' element={<IntroPage/>}/>
         </Route>
       </Routes>
       </BrowserRouter>      

@@ -20,11 +20,13 @@ const VerticalTabs = ({ tabs }) => {
           </span>
         </header>
       </Reveal>
-      <div className="flex">
+      <div className={tabs.length>1&&"flex"}>
         <div className="flex-none w-1/4">
           <Reveal>
+            {tabs.length>1&&
             <ul className="flex flex-col space-y-1">
-              {tabs.map((tab, index) => (
+              {
+                tabs.map((tab, index) => (
                 <li
                   key={index}
                   className={`cursor-pointer font-medium hover:bg-[#112240] hover:text-green-300 bg-opacity-5  transform duration-200 p-2 ${
@@ -36,8 +38,9 @@ const VerticalTabs = ({ tabs }) => {
                 >
                   {tab.title}
                 </li>
-              ))}
-            </ul>
+              ))
+              }
+            </ul>}
           </Reveal>
         </div>
         <Reveal>
@@ -69,7 +72,7 @@ const VerticalTabs = ({ tabs }) => {
                       d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
                     />
                   </svg>
-                  <p>{content.p}</p>
+                  <p className="ml-3">{content.p}</p>
                 </li>
               ))}
             </ul>

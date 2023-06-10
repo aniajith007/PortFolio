@@ -1,7 +1,8 @@
 import React from "react";
-import "../../Css/style.css";
-import Card from "../../Card";
-import { Reveal } from "../../Components/Reveal";
+import "../../../Css/style.css";
+import Card from "../../../Components/Card";
+import { Reveal } from "../../../Components/Reveal";
+import { WindupChildren, Pace, StyledText } from "windups";
 
 function About({about}) {
   return (
@@ -22,9 +23,14 @@ function About({about}) {
               </header>
             </Reveal>
             <Reveal>
+              <WindupChildren>
+                <Pace ms={80}><StyledText>
               <h1 class="text-3xl font-semibold mt-8 text-gray-800 dark:text-white lg:text-4xl lg:mt-0">
                 {about.heading.start}<span class="text-green-500 ">{about.heading.highLight}</span>
               </h1>
+              </StyledText>
+              </Pace>
+              </WindupChildren>
             </Reveal>
             <Reveal>
               <p class="mt-3 text-gray-600 dark:text-gray-400 text-xl">

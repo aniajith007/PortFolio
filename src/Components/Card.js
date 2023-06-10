@@ -1,5 +1,5 @@
 import React from 'react'
-import profileimg from '../src/Assets/IMG_20230120_085318_186.jpg'
+import profileimg from '../Assets/IMG_20230120_085318_186.jpg'
 
 function Card() {
   return (

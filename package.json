@@ -1,5 +1,5 @@
 {
-  "homepage":"https://aniajith007.github.io/PortFolio/",
+  "homepage": "https://aniajith007.github.io/PortFolio/",
   "name": "mine",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "windups": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

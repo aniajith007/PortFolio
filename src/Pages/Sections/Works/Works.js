@@ -1,5 +1,5 @@
 import React from "react";
-import Doublediv_Card from "../../Doublediv_Card";
+import Doublediv_Card from "../../../Doublediv_Card";
 
 function Works() {
   return (

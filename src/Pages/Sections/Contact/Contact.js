@@ -1,6 +1,6 @@
 import React from "react";
-import Hoverbutton from "../../Components/Hoverbutton";
-import { Reveal } from "../../Components/Reveal";
+import Hoverbutton from "../../../Components/Hoverbutton";
+import { Reveal } from "../../../Components/Reveal";
 
 function Contact({contact}) {
   return (

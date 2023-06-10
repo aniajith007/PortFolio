@@ -1,6 +1,6 @@
 import React from "react";
-import Hoverbutton from "../Components/Hoverbutton";
-import { Reveal, RevealTop } from "../Components/Reveal";
+import Hoverbutton from "../Hoverbutton";
+import { Reveal, RevealTop } from "../Reveal";
 import { Outlet } from "react-router-dom";
 
 const navigation = [
@@ -16,7 +16,7 @@ export default function Example() {
   var delayInc = 0.25;
   return (
     <>
-      <div className="navbar bg-white dark:bg-[#0a192f] dark:bg-transparent scroll-smooth fixed">
+      <div className="navbar bg-white dark:bg-[#0a192f]  scroll-smooth fixed">
         <div className="navbar-start">
           <div className="dropdown">
             <label

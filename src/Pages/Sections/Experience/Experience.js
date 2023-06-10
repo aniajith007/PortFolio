@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Reveal } from "../../Components/Reveal";
+import { Reveal } from "../../../Components/Reveal";
 
 const VerticalTabs = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);

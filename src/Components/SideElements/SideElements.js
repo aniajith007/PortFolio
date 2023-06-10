@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { RevealLeft,RevealRight,Reveal,RevealTop } from "../Components/Reveal";
+import { RevealLeft,RevealRight,Reveal,RevealTop } from "../Reveal";
 
 function SideElements({SideElementsData}) {
  

@@ -1,12 +1,13 @@
 import React from "react";
-import SideElements from "../SideElements/SideElements";
+import SideElements from "../../Components/SideElements/SideElements";
 import Jumbo from "../MainHero/Jumbo";
-import Sections from "../Sections";
-import Footer from "../Foot/Footer";
+import Sections from '../Sections';
+import Footer from "../../Components/Foot/Footer";
 
 function MainPage() {
+  // navheadings: ["About", "Experiance", "Works", "Timeline", "Contact", "TS"],
   const pageData = {
-    navheadings: ["About", "Experiance", "Works", "Timeline", "Contact", "TS"],
+    navheadings: ["About", "Experiance", "Works", "Contact", "TS"],
     SideElementsData: {
       rightEmail: {
         view: "SwaminathanGiridharan@gmail.com",
@@ -83,6 +84,7 @@ function MainPage() {
     },
     FooterData: { p: "Designed & Built by Swaminathan Giridharan" },
   }; // whole mockdata
+  
   return (
     <>
       <SideElements SideElementsData={pageData.SideElementsData} />

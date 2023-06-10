@@ -1,5 +1,5 @@
 import React from "react";
-import { Reveal } from "../Components/Reveal";
+import { Reveal } from "../Reveal";
 
 function Footer({footerData}) {
   return (

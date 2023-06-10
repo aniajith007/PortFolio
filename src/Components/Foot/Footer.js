@@ -1,86 +1,103 @@
 import React from "react";
-import { Reveal } from "../Reveal";
+import { Reveal,RevealLeft } from "../Reveal";
 
 function Footer({footerData}) {
   return (
     <footer class="bg-white dark:bg-[#0a192f]">
       <div class="container px-6 py-8 mx-auto">
-        <div class="flex flex-col items-center text-center">
-          {/* <a href="#">
-            <img
-              class="w-auto h-7"
-              src="https://merakiui.com/images/full-logo.svg"
-              alt=""
-            />
-          </a> */}
+        <div class="flex flex-col items-center text-center">                  
+        <ul className="lg:hidden md:hidden flex">
+          {footerData.sideelem_sm.links.map((link) => (
+            <>
+              {link.name === "github" ? (
+                <RevealLeft duration={0.5} delay={0.25}>
+                  <a href={link.href}>
+                    <li className="m-2 mb-4  hover:text-green-400 transition ease-in-out hover:-translate-y-1 hover:scale-100  duration-100">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <title>GitHub</title>
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </li>
+                  </a>
+                </RevealLeft>
+              ) : (
+                ""
+              )}
+              {link.name === "instagram" ? (
+                <RevealLeft duration={0.5} delay={0.5}>
+                  <a href={link.href}>
+                    <li className="m-2 mb-4   hover:text-green-400  transition ease-in-out hover:-translate-y-1 hover:scale-100  duration-100">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <title>Instagram</title>
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        ></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                    </li>
+                  </a>
+                </RevealLeft>
+              ) : (
+                ""
+              )}
 
-          {/* <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">
-            Designed & Built by Swaminathan Giridharan
-          </p> */}
-
-          {/* <div class="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center">
-            <button class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-gray-600 capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 dark:border-gray-400 dark:text-gray-300 sm:mt-0 sm:w-auto hover:bg-gray-50 focus:outline-none focus:ring dark:hover:bg-gray-800 focus:ring-gray-300 focus:ring-opacity-40">
-              <svg
-                class="w-5 h-5 mx-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM4 12.172C4.04732 16.5732 7.64111 20.1095 12.0425 20.086C16.444 20.0622 19.9995 16.4875 19.9995 12.086C19.9995 7.68451 16.444 4.10977 12.0425 4.086C7.64111 4.06246 4.04732 7.59876 4 12V12.172ZM10 16.5V7.5L16 12L10 16.5Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-
-              <span class="mx-1">View Demo</span>
-            </button>
-
-            <button class="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-              Get started
-            </button>
-          </div> */}
+              {link.name === "linkedin" ? (
+                <RevealLeft duration={0.5} delay={0.75}>
+                  <a href={link.href}>
+                    <li
+                      className="m-2 mb-4 hover:text-green-400  transition ease-in-out hover:-translate-y-1 hover:scale-100  duration-100"
+                      href={link.href}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <title>LinkedIn</title>
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </li>
+                  </a>
+                </RevealLeft>
+              ) : (
+                ""
+              )}
+            </>
+          ))}
+        </ul>
         </div>
 
         {/* <hr class="my-10 border-gray-200 dark:border-gray-700" /> */}
         <Reveal>
-        <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-          {/* <p class="text-sm text-gray-500">
-            © Copyright 2021. All Rights Reserved.
-          </p> */}
-          
+        <div class="flex flex-col items-center sm:flex-row sm:justify-between">                              
             <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400 font-poppins">
-              {footerData.p}
-            </p>
-          
-
-          {/* <div class="flex mt-3 -mx-2 sm:mt-0">
-            <a
-              href="#"
-              class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Reddit"
-            >
-              {" "}
-              Teams{" "}
-            </a>
-
-            <a
-              href="#"
-              class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Reddit"
-            >
-              {" "}
-              Privacy{" "}
-            </a>
-
-            <a
-              href="#"
-              class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Reddit"
-            >
-              {" "}
-              Cookies{" "}
-            </a>
-          </div> */}
+              {footerData.footerp.p}
+            </p>            
         </div>
         </Reveal>
       </div>

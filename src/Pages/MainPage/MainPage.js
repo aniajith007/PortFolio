@@ -92,7 +92,7 @@ function MainPage() {
       <Sections
         sectionData={pageData.SectionData}        
       />
-      <Footer footerData={pageData.FooterData} />
+      <Footer footerData={{footerp:pageData.FooterData,sideelem_sm:pageData.SideElementsData}} />
     </>
   );
 }

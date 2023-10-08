@@ -1,7 +1,7 @@
 import React from "react";
 import Hoverbutton from "../Hoverbutton";
 import { Reveal, RevealTop } from "../Reveal";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "About", href: "#about", current: true },
@@ -13,6 +13,16 @@ const navigation = [
 ];
 
 export default function Example() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const pageData = location?.state?.pagedata;
+  console.log("in mainpage loc data", location.state);
+  if (!location.state) {
+    console.log("in mainpage loc data", location.state);
+  } else {
+    navigate(-1);
+  }
+
   var delayInc = 0.25;
   return (
     <>
@@ -77,9 +87,9 @@ export default function Example() {
           </ul>
         </div>
       </div>
-      
-      <div>                  
-            <Outlet />                  
+
+      <div>
+        <Outlet />
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Hoverbutton from "../Hoverbutton";
 import { Reveal, RevealTop } from "../Reveal";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { pageData } from "../../Raw/Raw";
 
 const navigation = [
   { name: "About", href: "#about", current: true },
@@ -15,13 +16,14 @@ const navigation = [
 export default function Example() {
   const location = useLocation();
   const navigate = useNavigate();
-  const pageData = location?.state?.pagedata;
-  console.log("in mainpage loc data", location.state);
-  if (!location.state) {
-    console.log("in mainpage loc data", location.state);
-  } else {
-    navigate(-1);
-  }
+  //const pageData = location?.state?.pagedata;
+  //const pageData_raw = pageData
+  //console.log("in mainpage loc data", location.state);
+  // if (!location.state) {
+  //   console.log("in mainpage loc data", location.state);
+  // } else {
+  //   navigate(-1);
+  // }
 
   var delayInc = 0.25;
   return (

@@ -4,6 +4,7 @@ import Jumbo from "../MainHero/Jumbo";
 import Sections from '../Sections';
 import Footer from "../../Components/Foot/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
+import { pageData_raw } from "../../Raw/Raw";
 
 function MainPage() {  
   const location = useLocation()
@@ -12,15 +13,14 @@ function MainPage() {
   
   // navheadings: ["About", "Experiance", "Works", "Timeline", "Contact", "TS"],
   
-  const pageData = location?.state?.pagedata;
+  //const pageData = location?.state?.pagedata;
+  const pageData = pageData_raw
   // console.log("in mainpage loc data",location.state)
   // if(location.state){
   //   console.log("in mainpage loc data",location.state)
   // }else{
   //   navigate(-1)
   // }
-  
-  
   
 
   return (

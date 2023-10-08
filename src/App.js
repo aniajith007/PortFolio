@@ -8,10 +8,19 @@ import MockLoader from "./Pages/MockLoader";
 function App() {
   return (
     <div className="scroll-smooth">
-      <BrowserRouter>
+      {/* For Intro Page */}
+      {/* <BrowserRouter>
         <Routes>
           <Route index path="/PortFolio" element={<MockLoader />} />
           <Route path={"/PortFolio/Main"} element={<Navbar />}>
+            <Route index element={<MainPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter> */}
+      {/* Normal Mockdata */}
+      <BrowserRouter>
+        <Routes>          
+          <Route path={"/PortFolio"} element={<Navbar />}>
             <Route index element={<MainPage />} />
           </Route>
         </Routes>

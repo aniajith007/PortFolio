@@ -1,0 +1,76 @@
+create new repository and name it
+then come on vscode project page
+and open terminal and type the given code in github
+
+like 
+
+git init
+git add readme.md
+git .......
+
+
+
+it will push the existing project into that github repository.
+
+
+
+for github deployment and viewing pages in github
+
+
+If you using npm,,
+
+npm i gh-page --save
+
+
+then///
+
+go to package.json 
+and add at first line 
+
+"homepage":"http://githubaccusername.github.io/githubrepositoryname",
+
+
+then///
+
+go to Scripts,
+
+{
+	next to "start":"react-scripts start",
+	"predeploy":"npm run build",
+	"deploy" : "gh-pages -d build",
+}
+
+
+to make all changes 
+git init
+git add .     --add it to local
+git commit -m "Deployed website"       //commits all the changes   --add it to local commit
+git push    --push it to repo
+------------------Now the files synched with repo
+Parallely build and deploy the site
+-------------------with npm run predeploy and npm run deploy------------>publishing done
+
+///then run the deploy
+npm run predeploy
+npm run deploy
+
+
+
+in GitHub,,
+
+Main is our first code 
+
+
+
+git clone   ---download the repo in to our local folder
+
+go to git bash and type the repo http...
+
+git clone https://github.com/aniajith007/testReact.git    ---like thiss..
+
+
+--------------------------------If branch name changed----------------
+git branch -m main master
+git fetch origin    //git fetch is the command that tells your local git to retrieve the latest meta-data info from the original 
+git branch -u origin/master master
+git remote set-head origin -a

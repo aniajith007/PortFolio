@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./Pages/MainPage/MainPage";
 import IntroPage from "./Pages/IntroPage";
 import MockLoader from "./Pages/MockLoader";
+import Test from "./Pages/Test";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path={"/PortFolio"} element={<Navbar />}>
             <Route index element={<MainPage />} />
           </Route>
+          <Route path="/test" element={<Test/>}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Reveal } from "../../Components/Reveal";
 import { WindupChildren, Pace, StyledText, Pause } from "windups";
+import { Tilt } from 'react-tilt'
 function Jumbo({ jumbodata }) {
   return (
     <section class="bg-white min-h-screen flex items-center content-center dark:bg-[#0a192f] pt-16 pl-8 lg:pl-28 pb-80 lg:pb-32 font-poppins">

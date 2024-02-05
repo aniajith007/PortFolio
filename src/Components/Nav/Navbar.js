@@ -40,7 +40,9 @@ export default function Example() {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'downloaded_file.xlsx'; // Replace with the desired file name
+        const time  =new Date().toDateString().replaceAll(' ','_')
+        console.log(time.replaceAll(' ','_'))
+        a.download = `Swaminathan_G_Resume_${time}.pdf`; // Replace with the desired file name
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

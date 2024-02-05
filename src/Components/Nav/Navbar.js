@@ -3,14 +3,15 @@ import Hoverbutton from "../Hoverbutton";
 import { Reveal, RevealTop } from "../Reveal";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { pageData } from "../../Raw/Raw";
+import axios from "axios";
 
 const navigation = [
   { name: "About", href: "#about", current: true },
   { name: "Experience", href: "#experience", current: false },
-  { name: "Works", href: "#works", current: false },
-  { name: "Timeline", href: "#", current: false },
+  // { name: "Works", href: "#works", current: false },
+  // { name: "Timeline", href: "#", current: false },
   { name: "Contact", href: "#contact", current: false },
-  { name: "Co", href: "#contact", current: false },
+  { name: "Resume", href: "#", current: false },
 ];
 
 export default function Example() {
@@ -26,6 +27,31 @@ export default function Example() {
   // }
 
   var delayInc = 0.25;
+  const fileId = '1JRB4nne2oxu9hrUTgvmY9neYg8BSGtZ5'; // Replace with your actual Google Drive file ID
+  const apiKey = 'AIzaSyBW4wH4cSOUERpXYlbCKEbTtgCUi6zzaAI'; // Replace with your actual Google API key
+
+  const downloadFile = () => {
+    const apiUrl = `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media&key=${apiKey}`;
+
+    axios.get(apiUrl, { responseType: 'blob'})
+      .then(response => {
+        // Handle the file download response
+        const blob = new Blob([response.data]);
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'downloaded_file.xlsx'; // Replace with the desired file name
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error downloading file:', error);
+      });
+  };
+
   return (
     <>
       <div className="navbar bg-white dark:bg-[#0a192f]  scroll-smooth fixed">
@@ -57,7 +83,7 @@ export default function Example() {
               {
                 navigation.map((item, index) => (
                   <RevealTop duration={0.5} delay={(delayInc += 0.1)}>
-                    <li className="hover:text-green-400" key={index}>
+                    <li className="hover:text-green-400" key={index} onClick={item.name == 'Resume'&&downloadFile}>
                       <a href={item.href}>
                         <span className="text-green-400 text-sm font-mono">
                           0{index + 1 + ". "}
@@ -76,7 +102,7 @@ export default function Example() {
           <ul className="menu menu-horizontal px-1">
             {navigation.map((item, index) => (
               <RevealTop duration={0.5} delay={(delayInc += 0.1)}>
-                <li className="hover:text-green-400 text-sm">
+                <li className="hover:text-green-400 text-sm" onClick={item.name == 'Resume'&&downloadFile}>
                   <a href={item.href}>
                     <span className="text-green-400 font-mono">
                       0{index + 1 + ". "}

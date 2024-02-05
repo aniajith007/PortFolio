@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../Css/style.css";
 import Card from "../../../Components/Card";
 import { Reveal } from "../../../Components/Reveal";
 import { WindupChildren, Pace, StyledText } from "windups";
 import overlayimg from '../../../Assets/1706441122303.png'
 import { Tilt } from 'react-tilt'
+import axios from "axios";
 const defaultOptions = {
   reverse: false,  // reverse the tilt direction
   max: 35,     // max tilt rotation (degrees)
@@ -16,7 +17,36 @@ const defaultOptions = {
   reset: true,    // If the tilt effect has to be reset on exit.
   easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
 }
+
 function About({ about }) {
+  const [imgsrc,setImageSrc] = useState("")
+  const [Overimgsrc,setOverImageSrc] = useState("")
+  const MainImagefileId = '1hRzWVrolSobzzgab5VBWAJQACy4wFMGq'
+  const OverLayImagefileId = '1weFG-QXYFojdyQbkg0oasezGs2P7_sWD'
+  const apiKey = 'AIzaSyBW4wH4cSOUERpXYlbCKEbTtgCUi6zzaAI'
+  const getImg = async (imgid)=>{   
+    try {
+      const apiUrl = `https://www.googleapis.com/drive/v3/files/${imgid}?alt=media&key=${apiKey}`;
+  
+      const response = await axios.get(apiUrl, { responseType: 'blob' });
+  
+      // Handle the file download response
+      const blob = new Blob([response.data]);
+      const url = window.URL.createObjectURL(blob);
+  
+      // Set the image source
+      return url
+    } catch (error) {
+      // Handle errors
+      console.error('Error downloading image:', error);
+    }
+  }
+  
+  useEffect(()=>{
+    setImageSrc(getImg(MainImagefileId));
+    setOverImageSrc(getImg(OverLayImagefileId));
+  },[])
+
   return (
     <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen">
       <div class="items-center lg:flex lg:ml-12">
@@ -100,7 +130,7 @@ function About({ about }) {
             <Tilt options={defaultOptions} style={{ height: 300, width: 300 }}>
             <div class="relative">
               {/* <img src={overlayimg} alt="Image 1" class="w-full h-full object-cover" /> */}
-              <Card pictureSrc={about.picturePath} />
+              <Card pictureSrc={imgsrc} />
               <div class="absolute top-2 left-0 w-full h-full">
                 <img src={overlayimg} alt="Image 2" class="w-full h-full object-cover opacity-100 inset-8 z-40" />
               </div>

@@ -1,24 +1,41 @@
-import { Tilt } from 'react-tilt'
+import React from 'react';
+import axios from 'axios';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 
-const defaultOptions = {
-	reverse:        false,  // reverse the tilt direction
-	max:            35,     // max tilt rotation (degrees)
-	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
-	scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
-	speed:          1000,   // Speed of the enter/exit transition
-	transition:     true,   // Set a transition on enter/exit.
-	axis:           null,   // What axis should be disabled. Can be X or Y.
-	reset:          true,    // If the tilt effect has to be reset on exit.
-	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
-}
+// Import styles
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
-const Test = () => {
+const DownloadButton = () => {
+  const fileId = '1JRB4nne2oxu9hrUTgvmY9neYg8BSGtZ5'; // Replace with your actual Google Drive file ID
+  const apiKey = 'AIzaSyBW4wH4cSOUERpXYlbCKEbTtgCUi6zzaAI'; // Replace with your actual Google API key
+
+  const downloadFile = () => {
+    const apiUrl = `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media&key=${apiKey}`;
+
+    axios.get(apiUrl, { responseType: 'blob' })
+      .then(response => {
+        // Handle the file download response
+        const blob = new Blob([response.data]);
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'downloaded_file.xlsx'; // Replace with the desired file name
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error downloading file:', error);
+      });
+  };
   return (<>
-    <div className=''></div>
-    <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
-      
-    </Tilt>
+    <button onClick={downloadFile}>
+      Download File
+    </button>
     </>
-  )
-}
-export default Test;
+  );
+};
+
+export default DownloadButton;

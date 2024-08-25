@@ -30,18 +30,18 @@ export default function Example() {
   const fileId = '13yY_XbXVvNr4I9oPTgT3ySbHbz85W2xr'; // Replace with your actual Google Drive file ID
   const apiKey = 'AIzaSyBW4wH4cSOUERpXYlbCKEbTtgCUi6zzaAI'; // Replace with your actual Google API key
 
-  const downloadFile = () => {
+  const downloadFile = async () => {
     const apiUrl = `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media&key=${apiKey}`;
 
-    axios.get(apiUrl, { responseType: 'blob'})
+    await axios.get(apiUrl, { responseType: 'blob' })
       .then(response => {
         // Handle the file download response
         const blob = new Blob([response.data]);
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        const time  =new Date().toDateString().replaceAll(' ','_')
-        console.log(time.replaceAll(' ','_'))
+        const time = new Date().toDateString().replaceAll(' ', '_')
+        console.log(time.replaceAll(' ', '_'))
         a.download = `Swaminathan_G_Resume_${time}.pdf`; // Replace with the desired file name
         document.body.appendChild(a);
         a.click();
@@ -85,7 +85,7 @@ export default function Example() {
               {
                 navigation.map((item, index) => (
                   <RevealTop duration={0.5} delay={(delayInc += 0.1)}>
-                    <li className="hover:text-green-400" key={index} onClick={item.name == 'Resume'&&downloadFile}>
+                    <li className="hover:text-green-400" key={index} onClick={item.name == 'Resume' && downloadFile}>
                       <a href={item.href}>
                         <span className="text-green-400 text-sm font-mono">
                           0{index + 1 + ". "}
@@ -104,7 +104,7 @@ export default function Example() {
           <ul className="menu menu-horizontal px-1">
             {navigation.map((item, index) => (
               <RevealTop duration={0.5} delay={(delayInc += 0.1)}>
-                <li className="hover:text-green-400 text-sm" onClick={item.name == 'Resume'&&downloadFile}>
+                <li className="hover:text-green-400 text-sm" onClick={item.name == 'Resume' && downloadFile}>
                   <a href={item.href}>
                     <span className="text-green-400 font-mono">
                       0{index + 1 + ". "}

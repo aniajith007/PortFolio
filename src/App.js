@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./Pages/MainPage/MainPage";
 import IntroPage from "./Pages/IntroPage";
 import MockLoader from "./Pages/MockLoader";
-import Test from "./Pages/Test";
+import Test from "./Pages/Test2";
 
 function App() {
   return (
@@ -20,11 +20,11 @@ function App() {
       </BrowserRouter> */}
       {/* Normal Mockdata */}
       <BrowserRouter>
-        <Routes>          
+        <Routes>
           <Route path={"/PortFolio"} element={<Navbar />}>
             <Route index element={<MainPage />} />
           </Route>
-          <Route path="/test" element={<Test/>}/>
+          <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>
     </div>

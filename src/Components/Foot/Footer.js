@@ -3,7 +3,7 @@ import { Reveal,RevealLeft } from "../Reveal";
 
 function Footer({footerData}) {
   return (
-    <footer class="bg-white dark:bg-[#0a192f]">
+    <footer class="bg-white dark:bg-[#0a192f] selection:text-gray-50">
       <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">                  
         <ul className="lg:hidden md:hidden flex">

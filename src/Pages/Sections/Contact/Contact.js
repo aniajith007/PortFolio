@@ -5,7 +5,7 @@ import { Reveal } from "../../../Components/Reveal";
 function Contact({contact}) {
   return (
     <>
-      <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen">
+      <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen selection:text-gray-50">
         <div class="items-center lg:flex lg:ml-12 justify-center">
           <div class="w-full lg:w-1/2">
             <div class="lg:max-w-lg">
@@ -33,7 +33,7 @@ function Contact({contact}) {
             </div>
             {/* <div className="lg:ml-44 md:ml-56"> */}
             <Reveal>
-            <div className="absolute ml-24 lg:ml-48 lg:left-auto md:ml-72">             
+            <div className="absolute ml-24 lg:ml-48 lg:left-auto md:ml-72 selection:text-gray-50">             
                 <Hoverbutton label={contact.buttonText} href={contact.buttonLink} />
               </div></Reveal>
           </div>

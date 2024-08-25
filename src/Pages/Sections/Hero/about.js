@@ -48,7 +48,7 @@ function About({ about }) {
   },[])
 
   return (
-    <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen">
+    <div class="bg-white pl-8 pr-8 lg:pl-28 lg:pr-24 lg:pt-10 lg:pb-4 dark:bg-[#0a192f] min-h-screen selection:text-gray-50">
       <div class="items-center lg:flex lg:ml-12">
         <div class="w-full lg:w-1/2">
           <div class="lg:max-w-lg">

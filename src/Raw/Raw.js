@@ -8,11 +8,11 @@ export const pageData_raw = {
       links: [
         {
           name: "github",
-          href: "https://www.google.com",
+          href: "https://github.com/aniajith007",
         },
         {
           name: "instagram",
-          href: "https://www.instagram.com/aniajith_007/",
+          href: "https://www.instagram.com/_.aniajith._/",
         },
         {
           name: "linkedin",

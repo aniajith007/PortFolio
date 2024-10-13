@@ -8,7 +8,7 @@ import axios from "axios";
 const navigation = [
   { name: "About", href: "#about", current: true },
   { name: "Experience", href: "#experience", current: false },
-  // { name: "Works", href: "#works", current: false },
+  { name: "Works", href: "#works", current: true },
   // { name: "Timeline", href: "#", current: false },
   { name: "Contact", href: "#contact", current: false },
   { name: "Resume", href: "#", current: false },

@@ -5,6 +5,7 @@ import Sections from '../Sections';
 import Footer from "../../Components/Foot/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
 import { pageData_raw } from "../../Raw/Raw";
+import Works from "../Sections/Works/Works";
 
 function MainPage() {  
   const location = useLocation()
@@ -30,6 +31,7 @@ function MainPage() {
       <Sections
         sectionData={pageData?pageData.SectionData:""}        
       />
+      
       <Footer footerData={{footerp:pageData?pageData.FooterData:"",sideelem_sm:pageData?pageData.SideElementsData:""}} />
     </>
   );

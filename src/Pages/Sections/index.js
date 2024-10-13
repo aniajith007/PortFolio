@@ -14,9 +14,9 @@ function Sections({sectionData}) {
       <section id="experience">
         <VerticalTabs tabs={sectionData.Experiancetabs} />
       </section>
-      {/* <section id="works">
+      <section id="works">
         <Works/>
-      </section> */}
+      </section>
       <section id = "contact">
         <Contact contact= {sectionData.ContactData}/>
       </section>
